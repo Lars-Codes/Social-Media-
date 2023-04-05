@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head elements -->
+<!-- Comment!-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/styleLogin.css">
+</head>
+<!-- <div class="navbar"><a href="login.html" target="_blank">Login </a><a href="register.html" target="_blank">Register
+    </a><a href="post.html" target="_blank">Post </a></div> -->
+
+<body>
+    <div class="container">
+        <div class="form-container sign-in-container">
+            <div class="sign-in">
+                <h1>Sign in</h1>
+            </div>
+            <form action="post.html" id = "loginForm">
+                <!-- Username -->
+                <i class="fa fa-user icon"></i>
+                <input type="text" placeholder="Username" class="user" id = "loginUser">
+                <br>
+                <!-- Password -->
+                <input type="password" placeholder="Password" class="pass" id = "loginPass">
+                <br>
+                <!-- Login button -->
+                <input type="submit" value="Login" class="regbutton">
+                <br>
+                <!-- Remember me box -->
+                <div>
+                    <input type="checkbox" id="remember" class="remember">
+                    <label for="remember" class="remem">Remember me</label>
+                </div>
+                <br>
+            </form>
+            <div class="new">Don't have an account? Create one <a href="register.html">here.</a></div>
+
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <h1>Returning User </h1>
+                <!-- <div><img src = "icons8-electronic-64.png"></div>  -->
+                <!-- <h2>Join the Mathematic Artistic Electronic Community!</h2> -->
+                <h2>
+                    <div class="join"><em>Welcome back to the</em></div>
+                    <div class="math"> Mathematic, </div>
+                    <div class="art">Artistic, </div>
+                    <div class="electronic">Electronic</div>
+                    <div class="community"><em>Community!</em></div>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <p>
+    </p>
+    <!-- Link JavaScript file -->
+    <script src = "./scripts/main.js"></script> 
+</body>
+
+</html>
