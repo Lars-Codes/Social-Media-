@@ -41,6 +41,10 @@ if(loginForm){
     loginForm.addEventListener("submit", readLogin); 
 }
 
+function print8bAssignment6(e){
+    console.log(getUsers());
+}
+
 function readLogin(e){
     e.preventDefault(); 
     let username = document.getElementById("loginUser").value; 
@@ -48,7 +52,8 @@ function readLogin(e){
     // postData('http://localhost:5500/users/login', {username: username, password: pswd})
     // .then((data) => {
     //     if(!data.message){
-    //         window.location.href("../post.html"); 
+            // window.location.href("../post.html"); 
+            window.location.href = "./post.html"; 
     //     }
     // })
     // .catch((error) => {
