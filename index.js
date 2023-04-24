@@ -8,6 +8,17 @@ const app = express();
 //Gives us access to all of our routes in USER. need to create this for ever route file. 
 const userRoutes = require("./server/routes/user");
 
+
+app.use(express.json()); 
+
+//CORS middleware 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*"); 
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization")
+    res.header("Access-Control-Allow-Headers", "GET, POST, PUT, DELETE, OPTIONS"); 
+    next(); 
+})
+
 //What we will call on our front end when using fetch and making http requests. Notice 
 // userRoutes is our second parameter. 
 app.use("/users", userRoutes);

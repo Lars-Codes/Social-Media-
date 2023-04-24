@@ -45,9 +45,16 @@ function readLogin(e){
     e.preventDefault(); 
     let username = document.getElementById("loginUser").value; 
     let password = document.getElementById("loginPass").value; 
-    console.log("Username: " + username + " Password: " + password); 
-    //Reloads to next page 
-    window.location.href = "./post.html";
+    // postData('http://localhost:5500/users/login', {username: username, password: pswd})
+    // .then((data) => {
+    //     if(!data.message){
+    //         window.location.href("../post.html"); 
+    //     }
+    // })
+    // .catch((error) => {
+    //     const errText = error.message; 
+    //     console.log(`Error! ${errText}`); 
+    // })
 }
 
 //Post info 
@@ -61,4 +68,24 @@ function makePost(e){
     let subjectText = document.getElementById("postSubject").value;
     let content = document.getElementById("textContent").value; 
     console.log("subjectText: " + subjectText + "\nContent: " + content); 
+}
+
+async function postData(url = '', data = {}) {
+    const response = await fetch(url, {
+        method: 'POST', 
+        mode: 'cors', 
+        cache: 'no-cache', 
+        credentials: 'same-origin', 
+        headers: {
+            'Content-Type': 'application/json'
+        }, 
+        redirect: 'follow', 
+        referrerPolicy: 'no-referrer', 
+        body: JSON.stringify(data)
+    }); 
+    if(response.ok) {
+        return await response.json(); 
+    } else{
+        throw await response.json(); 
+    }
 }
