@@ -39,21 +39,26 @@ function createUser(e){
 let loginForm = document.getElementById("loginForm");
 if(loginForm){
     loginForm.addEventListener("submit", readLogin); 
+
 }
 
-function print8bAssignment6(e){
-    console.log(getUsers());
-}
+// function print8bAssignment6(e){
+//     console.log(getUsers());
+// }
 
 function readLogin(e){
     e.preventDefault(); 
     let username = document.getElementById("loginUser").value; 
     let password = document.getElementById("loginPass").value; 
+    fetch('http://localhost:3000/users/')
+    .then(res=> res.json())
+    .then(data => console.log(data))
+    .catch()
     // postData('http://localhost:5500/users/login', {username: username, password: pswd})
     // .then((data) => {
     //     if(!data.message){
             // window.location.href("../post.html"); 
-            window.location.href = "./post.html"; 
+            // window.location.href = "./post.html"; 
     //     }
     // })
     // .catch((error) => {
