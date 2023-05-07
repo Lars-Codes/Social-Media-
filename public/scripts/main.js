@@ -30,6 +30,7 @@ function createUser(e){
     let firstname = document.getElementById("fName").value;
     let lname = document.getElementById("lname").value; 
     const newUser = new User(username, password, firstname, lname); 
+    //fetch data 
     console.log(newUser.getFirstName() + " " + newUser.getLastName() + " " + newUser.getUsername() + " " + newUser.getPassword()); 
     //Reloads to next page 
     window.location.href = "./login.html";
@@ -42,10 +43,7 @@ if(loginForm){
 
 }
 
-// function print8bAssignment6(e){
-//     console.log(getUsers());
-// }
-
+//use a fetch data function 
 function readLogin(e){
     e.preventDefault(); 
     let username = document.getElementById("loginUser").value; 

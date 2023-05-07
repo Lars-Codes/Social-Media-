@@ -17,7 +17,7 @@ const query = (sql, binding) => {
     });
 };
 
-const createQuery = "CREATE DATABASE IF NOT EXISTS calculart;";
-con.query(createQuery); 
+// const createQuery = "CREATE DATABASE IF NOT EXISTS calculart;";
+// con.query(createQuery); 
 
 module.exports = { con, query }; 
